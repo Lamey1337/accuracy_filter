@@ -13,4 +13,4 @@ Usage:
   * Run [ py main.py ] in terminal
   * Copy collection.db into osu folder
 
-![alt text](http://url/to/img.png)
+![Example](https://sun4-21.userapi.com/impg/WwD3qiBm_qGnQW_OHi_ZrDZqur4UO_KHm_ZEQw/uLujhdA1b9Y.jpg?size=1366x768&quality=96&sign=e27bef781a5e4a0616dcde1e192baf96&type=album)
