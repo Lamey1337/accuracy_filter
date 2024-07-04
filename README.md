@@ -2,7 +2,7 @@
 ____
 It is based on https://github.com/KirkSuD/osu_db_kaitai_struct
 ____
-Install kitai_struct python runtime lib: 
+Install kaitai_struct python runtime lib: 
   * py -m pip install --upgrade kaitaistruct
 ____
 
@@ -13,3 +13,4 @@ Usage:
   * Run [ py main.py ] in terminal
   * Copy collection.db into osu folder
 
+![alt text](http://url/to/img.png)
