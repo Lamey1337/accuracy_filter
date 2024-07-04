@@ -11,5 +11,5 @@ This program sorts your osu mania scores based on your local top accuracy score 
 Usage:
   * Copy scores.db from osu directory into main.py directory
   * Run [ py main.py ] in terminal
-  * Copy collection.py into osu folder
+  * Copy collection.db into osu folder
 
