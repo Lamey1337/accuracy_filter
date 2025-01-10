@@ -219,9 +219,9 @@ class OsuDb(KaitaiStruct):
                 raise kaitaistruct.ValidationNotEqualError(b"\x08", self.magic1, self._io, u"/types/int_double_pair/seq/0")
             self.int = self._io.read_s4le()
             self.magic2 = self._io.read_bytes(1)
-            if not self.magic2 == b"\x0D":
-                raise kaitaistruct.ValidationNotEqualError(b"\x0D", self.magic2, self._io, u"/types/int_double_pair/seq/2")
-            self.double = self._io.read_f8le()
+            if not self.magic2 == b"\x0C":
+                raise kaitaistruct.ValidationNotEqualError(b"\x0C", self.magic2, self._io, u"/types/int_double_pair/seq/2")
+            self.double = self._io.read_f4le()
 
 
     class IntDoublePairs(KaitaiStruct):

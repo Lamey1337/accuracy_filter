@@ -39,15 +39,18 @@ def writeCollectionDB(version, collections):
 
 def is_unplayed(hash):
 
-    for beatmap in osuScores.beatmaps:
-        if beatmap.md5_hash.value == hash:
-            return False
-
+    if hash in mania_scores:
+        return False
+    
     return True
+
 
 osu_scores_path = "./scores.db"
 osu_db_path = "./osu!.db"
 
+mania_scores = []
+
+mania_98 = []
 mania_99 = []
 mania_05 = []
 mania_08 = []
@@ -83,15 +86,18 @@ for ind, beatmap in enumerate(osuScores.beatmaps):
     
     acc_list.sort(key=lambda x: x["acc"])
     item = acc_list.pop()
+    mania_scores.append(item["hash"])
 
-    if item["acc"] < 100:
+    if item["acc"] < 100 and item["acc"] > 99.8:
         mania_100.append(item["hash"])
-    if item["acc"] < 99.8:
+    if item["acc"] < 99.8 and item["acc"] > 99.5:
         mania_08.append(item["hash"])
-    if item["acc"] < 99.5:
+    if item["acc"] < 99.5 and item["acc"] > 99:
         mania_05.append(item["hash"])
-    if item["acc"] < 99:
+    if item["acc"] < 99 and item["acc"] > 98:
         mania_99.append(item["hash"])
+    if item["acc"] < 98:
+        mania_98.append(item["hash"])
 
 print("Processing beatmaps . . .\n")
 osu_data_len = len(osu_data.beatmaps)
@@ -124,8 +130,12 @@ c5 = [
     "Unplayed mania",
     mania_unplayed
 ]
+c6 = [
+    "98% mania",
+    mania_98
+]
 
-collections = [c1, c2, c3, c4, c5]
+collections = [c1, c2, c3, c4, c5, c6]
 
 print("Generating collection.db file . . .\n")
 writeCollectionDB(version, collections)
