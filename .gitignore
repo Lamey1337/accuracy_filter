@@ -1,3 +1,5 @@
 osu_collection.py
 __pycache__/
 run.bat
+osu!.db
+scores.db
