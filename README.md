@@ -9,7 +9,7 @@ ____
 This program sorts your osu mania scores based on your local top accuracy score and generates beatmap collections of it
 
 Usage:
-  * Copy scores.db from osu directory into main.py directory
+  * Copy scores.db and osu!.db from osu directory into main.py directory
   * Run [ py main.py ] in terminal
   * Copy collection.db into osu folder
 
